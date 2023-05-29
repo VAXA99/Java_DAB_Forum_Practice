@@ -12,10 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class UserRepository implements  IUserRepository {
+public class UserRepository implements IUserRepository {
 
     private List<User> users = new ArrayList<>();
-    String FILE_PATH = "src/main/resources/XML/data.xml";
+    String FILE_PATH = "src/main/resources/XML/admins.xml";
 
 
     public UserRepository() {
@@ -29,8 +29,18 @@ public class UserRepository implements  IUserRepository {
 
     @Async
     public User findById(Integer id) {
-            for (User user : users) {
+        for (User user : users) {
             if (user.getId().equals(id)) {
+                return user;
+            }
+        }
+        return null;
+    }
+
+    @Async
+    public User findByUsername(String username) {
+        for (User user : users) {
+            if (user.getLogin().equals(username)) {
                 return user;
             }
         }
@@ -73,11 +83,12 @@ public class UserRepository implements  IUserRepository {
     public void loadData() {
         try {
             XmlMapper xmlMapper = new XmlMapper();
-            users = xmlMapper.readValue(new File(FILE_PATH), new TypeReference<List<User>>() {});
+            users = xmlMapper.readValue(new File(FILE_PATH), new TypeReference<List<User>>() {
+            });
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 }
+

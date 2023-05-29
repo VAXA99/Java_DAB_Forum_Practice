@@ -12,4 +12,9 @@ public class MvcConfig implements WebMvcConfigurer {
         registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
     }
 
+    public void addViewControllers(ViewControllerRegistry registry) {
+        /*registry.addViewController("/hello").setViewName("hello");
+        registry.addViewController("/sign_in").setViewName("sign_in");*/
+    }
+
 }

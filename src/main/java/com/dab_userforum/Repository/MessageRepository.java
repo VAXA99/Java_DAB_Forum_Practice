@@ -4,15 +4,17 @@ import com.dab_userforum.Entity.Message;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Repository;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class MessageRepository implements IMessageRepository {
     private List<Message> messages = new ArrayList<>();
-    String FILE_PATH = "src/main/resources/XML/data.xml";
+    String FILE_PATH = "src/main/resources/XML/messages.xml";
 
 
     public MessageRepository() {

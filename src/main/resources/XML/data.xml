@@ -1,4 +1,3 @@
-<root>
 <forum_users>
     <forum_user>
         <id>1</id>
@@ -227,48 +226,7 @@
     </forum_user>
 </forum_users>
 
-    <forum_messages>
-        <forum_message>
-            <message_id>1</message_id>
-            <message_content>Hello, world!</message_content>
-            <user_id>123</user_id>
-            <post_id>456</post_id>
-            <timestamp>2023-05-21T10:30:00Z</timestamp>
-        </forum_message>
-        <forum_message>
-            <message_id>2</message_id>
-            <message_content>How are you?</message_content>
-            <user_id>456</user_id>
-            <post_id>789</post_id>
-            <timestamp>2023-05-21T11:15:00Z</timestamp>
-        </forum_message>
-        <forum_message>
-            <message_id>3</message_id>
-            <message_content>I'm doing well. Thanks for asking!</message_content>
-            <user_id>123</user_id>
-            <post_id>789</post_id>
-            <timestamp>2023-05-21T11:30:00Z</timestamp>
-        </forum_message>
-        <forum_message>
-            <message_id>4</message_id>
-            <message_content>Any plans for the weekend?</message_content>
-            <user_id>789</user_id>
-            <post_id>123</post_id>
-            <timestamp>2023-05-21T12:00:00Z</timestamp>
-        </forum_message>
-        <forum_message>
-            <message_id>5</message_id>
-            <message_content>I'm thinking of going hiking. How about you?</message_content>
-            <user_id>123</user_id>
-            <post_id>123</post_id>
-            <timestamp>2023-05-21T12:30:00Z</timestamp>
-        </forum_message>
-    </forum_messages>
 
 
 
-
-
-
-</root>
 
