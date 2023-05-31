@@ -2,6 +2,7 @@ package com.dab_userforum.Repository;
 
 import com.dab_userforum.Entity.User;
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Repository;
@@ -15,7 +16,7 @@ import java.util.List;
 public class UserRepository implements IUserRepository {
 
     private List<User> users = new ArrayList<>();
-    String FILE_PATH = "src/main/resources/XML/admins.xml";
+    String FILE_PATH = "src/main/resources/XML/users.xml";
 
 
     public UserRepository() {

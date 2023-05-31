@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/sign.css">
+    <title>Регистрация</title>
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            DabForum
+        </div>
+        <nav class="nav">
+            <a href="/" class="nav-link">Главная</a>
+            <a href="/messages" class="nav-link">Сообщения</a>
+        </nav>
+    </div>
+</header>
+<!-- Main -->
+<main>
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+        <h1>Регистрация</h1>
+        <form action="/sign_up" method="post">
+            <label>
+                <input placeholder="Никнейм" type="text" name="login">
+            </label>
+            <label>
+                <input placeholder="Почта" type="text" name="email">
+            </label>
+            <label>
+                <input placeholder="Пароль" type="password" name="password">
+            </label>
+            <label>
+                <input placeholder="Повторите пароль" type="password">
+            </label>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        <div class="member">
+            Уже зарегистрированы?
+            <a href="/sign_in">Войти</a>
+        </div>
+    </div>
+
+</main>
+</body>
+</html>

@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 @Configuration
@@ -32,7 +33,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                     .formLogin()
                     .loginPage("/sign_in")
-                    .defaultSuccessUrl("/admin")
+                    .defaultSuccessUrl("/")
                     .permitAll()
                 .and()
                     .logout()
@@ -43,7 +44,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     @Async
     public void configure(AuthenticationManagerBuilder auth) throws Exception{
-        auth.userDetailsService(userService);
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        auth
+                .userDetailsService(userService)
+                .passwordEncoder(passwordEncoder);
     }
 
 

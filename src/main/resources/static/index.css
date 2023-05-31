@@ -1,0 +1,147 @@
+/* Global Styles */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Header */
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link {
+    color: white;
+    font-size: 18px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Intro */
+
+.intro {
+    background-color: #fff;
+    padding: 164px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.intro__inner {
+    text-align: center;
+}
+
+.intro__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.intro__subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: all .2s linear;
+}
+
+.btn:hover {
+    background-color: #3e8e41;
+}
+
+.btn--red {
+    background-color: #d9534f;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer__block {
+    width: 50%;
+}
+
+.footer__title {
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer__address {
+    margin-bottom: 10px;
+    font-family: 'Cardo', serif;
+}
+
+.footer__text {
+    margin-bottom: 20px;
+}

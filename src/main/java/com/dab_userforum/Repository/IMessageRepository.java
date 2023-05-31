@@ -10,4 +10,5 @@ public interface IMessageRepository {
     public void add(Message message);
     public void update(Message message);
     public void delete(Integer id);
+
 }
