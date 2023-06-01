@@ -2,7 +2,6 @@ package com.dab_userforum.Repository;
 
 import com.dab_userforum.Entity.Message;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Repository;

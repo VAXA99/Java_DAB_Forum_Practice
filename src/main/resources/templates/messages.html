@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400i|Open+Sans:700|Raleway:300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  type="text/css" href="/static/messages.css">
+    <title>Сообщения</title>
 </head>
 <body>
-
+<!-- Header -->
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            DabForum
+        </div>
+        <nav class="nav">
+            <a href="/" class="nav-link">Главная</a>
+            <a href="/messages" class="nav-link">Сообщения</a>
+        </nav>
+    </div>
+</header>
+<div th:each="message : ${messages}">
+    <div class="message">
+        <p class="content" th:text="${message.messageContent}"></p>
+        <div class="meta">
+            <span>Username: <span th:text="${message.login}"></span></span>
+            <span>Timestamp: <span class="timestamp" th:text="${message.timestamp}"></span></span>
+        </div>
+    </div>
+</div>
 </body>
 </html>

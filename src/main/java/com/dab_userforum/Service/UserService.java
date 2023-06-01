@@ -1,7 +1,9 @@
 package com.dab_userforum.Service;
 
 
+import com.dab_userforum.Entity.Message;
 import com.dab_userforum.Entity.User;
+import com.dab_userforum.Repository.IMessageRepository;
 import com.dab_userforum.Repository.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -15,6 +17,9 @@ public class UserService implements IUserService {
 
     @Autowired
     private IUserRepository userRepository;
+
+    @Autowired
+    private IMessageRepository messageRepository;
 
     @Async
     public List<User> getAll(){
@@ -43,4 +48,26 @@ public class UserService implements IUserService {
         userRepository.update(user);
     }
 
+    @Async
+    public void writeMessage(Message message, Integer userId) {
+        User writingUser = userRepository.findById(userId);
+        Integer currentMessageNumber = writingUser.getNumberOfMessages();
+        writingUser.setNumberOfMessages(currentMessageNumber + 1);
+        userRepository.update(writingUser);
+        messageRepository.add(message);
+    }
+
+    @Async
+    public void deleteMessage(Integer messageId, Integer userId) {
+        User writingUser = userRepository.findById(userId);
+        Integer currentMessageNumber = writingUser.getNumberOfMessages();
+        writingUser.setNumberOfMessages(currentMessageNumber - 1);
+        userRepository.update(writingUser);
+        messageRepository.delete(messageId);
+    }
+
+    @Async
+    public void updateMessage(Message message) {
+        messageRepository.update(message);
+    }
 }

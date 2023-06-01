@@ -109,39 +109,3 @@ body {
 .btn--red {
     background-color: #d9534f;
 }
-
-/* Footer */
-
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 40px 0;
-    font-size: 16px;
-    font-family: 'Raleway', sans-serif;
-}
-
-.footer__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.footer__block {
-    width: 50%;
-}
-
-.footer__title {
-    font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-family: 'Raleway', sans-serif;
-}
-
-.footer__address {
-    margin-bottom: 10px;
-    font-family: 'Cardo', serif;
-}
-
-.footer__text {
-    margin-bottom: 20px;
-}

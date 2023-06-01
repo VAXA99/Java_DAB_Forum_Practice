@@ -17,20 +17,27 @@ public class Message {
     @JacksonXmlProperty(localName = "user_id")
     private Integer userId;
 
-    @JacksonXmlProperty(localName = "post_id")
-    private Integer postId;
+    @JacksonXmlProperty(localName = "login")
+    private String login;
 
     @JacksonXmlProperty(localName = "timestamp")
-    private Date timestamp;
+    private String timestamp;
 
     public Message() {
     }
 
-    public Message(Integer id, String messageContent, Integer userId, Integer postId, Date timestamp) {
+    public Message(String messageContent, Integer userId, String login, String timestamp) {
+        this.messageContent = messageContent;
+        this.userId = userId;
+        this.login = login;
+        this.timestamp = timestamp;
+    }
+
+    public Message(Integer id, String messageContent, Integer userId, String login, String timestamp) {
         this.id = id;
         this.messageContent = messageContent;
         this.userId = userId;
-        this.postId = postId;
+        this.login = login;
         this.timestamp = timestamp;
     }
 
@@ -58,19 +65,19 @@ public class Message {
         this.userId = userId;
     }
 
-    public Integer getPostId() {
-        return postId;
+    public String getLogin() {
+        return login;
     }
 
-    public void setPostId(Integer postId) {
-        this.postId = postId;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
-    public Date getTimestamp() {
+    public String getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Date timestamp) {
+    public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
 }
