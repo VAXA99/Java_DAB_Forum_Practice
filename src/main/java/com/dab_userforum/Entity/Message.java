@@ -1,26 +1,15 @@
 package com.dab_userforum.Entity;
 
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
-
-import java.util.Date;
-
-@JacksonXmlRootElement(localName = "forum_message")
 public class Message {
 
-    @JacksonXmlProperty(localName = "message_id")
     private Integer id;
 
-    @JacksonXmlProperty(localName = "message_content")
     private String messageContent;
 
-    @JacksonXmlProperty(localName = "user_id")
     private Integer userId;
 
-    @JacksonXmlProperty(localName = "login")
     private String login;
 
-    @JacksonXmlProperty(localName = "timestamp")
     private String timestamp;
 
     public Message() {

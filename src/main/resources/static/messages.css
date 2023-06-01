@@ -1,5 +1,4 @@
 /* Global Styles */
-
 *,
 *:before,
 *:after {
@@ -14,14 +13,13 @@ p {
     margin: 0 0 10px;
 }
 
-
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+    background-color: #D0D0D0;
 }
 
 /* Header */
-
 .header {
     background-color: #333;
     color: white;
@@ -57,11 +55,13 @@ body {
 }
 
 /* Messages */
-
 .message {
     padding: 10px;
+    margin: 20px;
     border: 1px solid #ccc;
-    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
 }
 
 .message .content {
@@ -79,4 +79,51 @@ body {
 
 .message .meta .timestamp {
     font-style: italic;
+}
+
+.message .actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+}
+
+.message .actions button {
+    margin: 15px 5px 10px;
+    border-radius: 5px;
+}
+
+.write-message-container {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    width: 97%;
+}
+
+.write-message-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+}
+
+.write-message-button {
+    margin-left: 10px;
+    padding: 8px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.write-message-button i {
+    font-size: 18px;
+}
+
+.write-message-button:hover {
+    background-color: #555;
 }

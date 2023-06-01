@@ -1,34 +1,19 @@
 package com.dab_userforum.Entity;
 
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
-
-import java.time.LocalDate;
-import java.util.Date;
-
-
-@JacksonXmlRootElement(localName = "forum_admin")
 public class User {
 
-    @JacksonXmlProperty(localName = "id")
     private Integer id;
 
-    @JacksonXmlProperty(localName = "login")
     private String login;
 
-    @JacksonXmlProperty(localName = "password")
     private String password;
 
-    @JacksonXmlProperty(localName = "date_of_registration")
     private String dateOfRegistration;
 
-    @JacksonXmlProperty(localName = "email_address")
     private String emailAddress;
 
-    @JacksonXmlProperty(localName = "number_of_messages")
     private Integer numberOfMessages;
 
-   @JacksonXmlProperty(localName = "role")
     private String role;
 
     public User() {

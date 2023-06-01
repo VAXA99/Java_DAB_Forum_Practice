@@ -2,8 +2,7 @@ package com.dab_userforum.Repository;
 
 import com.dab_userforum.Entity.User;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Repository;
 
@@ -16,7 +15,7 @@ import java.util.List;
 public class UserRepository implements IUserRepository {
 
     private List<User> users = new ArrayList<>();
-    String FILE_PATH = "src/main/resources/XML/users.xml";
+    private final String FILE_PATH = "src/main/resources/JSON/users.json";
 
 
     public UserRepository() {
@@ -68,28 +67,25 @@ public class UserRepository implements IUserRepository {
 
     @Async
     public void delete(Integer id) {
-        users.removeIf(wagon -> wagon.getId().equals(id));
+        users.removeIf(user -> user.getId().equals(id));
         saveData();
     }
 
     private void saveData() {
         try {
-            XmlMapper xmlMapper = new XmlMapper();
-            xmlMapper.writeValue(new File(FILE_PATH), users);
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.writeValue(new File(FILE_PATH), users);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void loadData() {
+    private void loadData() {
         try {
-            XmlMapper xmlMapper = new XmlMapper();
-            users = xmlMapper.readValue(new File(FILE_PATH), new TypeReference<List<User>>() {
-            });
-
+            ObjectMapper objectMapper = new ObjectMapper();
+            users = objectMapper.readValue(new File(FILE_PATH), new TypeReference<List<User>>() {});
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 }
-

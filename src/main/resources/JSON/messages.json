@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "messageContent": "Hello, how are you?",
+    "userId": 1,
+    "login": "johnsmith",
+    "timestamp": "2023-05-31 10:15:30"
+  },
+  {
+    "id": 2,
+    "messageContent": "I'm doing great, thanks for asking!",
+    "userId": 2,
+    "login": "janedoe",
+    "timestamp": "2023-05-31 11:20:45"
+  },
+  {
+    "id": 3,
+    "messageContent": "Any plans for the weekend?",
+    "userId": 1,
+    "login": "johnsmith",
+    "timestamp": "2023-05-31 15:45:10"
+  },
+  {
+    "id": 4,
+    "messageContent": "I'm thinking of going hiking. How about you?",
+    "userId": 2,
+    "login": "janedoe",
+    "timestamp": "2023-05-31 16:30:55"
+  }
+]

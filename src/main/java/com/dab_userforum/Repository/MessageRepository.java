@@ -2,7 +2,7 @@ package com.dab_userforum.Repository;
 
 import com.dab_userforum.Entity.Message;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Repository;
 
@@ -14,8 +14,7 @@ import java.util.List;
 @Repository
 public class MessageRepository implements IMessageRepository {
     private List<Message> messages = new ArrayList<>();
-    String FILE_PATH = "src/main/resources/XML/messages.xml";
-
+    private final String FILE_PATH = "src/main/resources/JSON/messages.json";
 
     public MessageRepository() {
         loadData();
@@ -56,24 +55,23 @@ public class MessageRepository implements IMessageRepository {
 
     @Async
     public void delete(Integer id) {
-        messages.removeIf(wagon -> wagon.getId().equals(id));
+        messages.removeIf(message -> message.getId().equals(id));
         saveData();
     }
 
     private void saveData() {
         try {
-            XmlMapper xmlMapper = new XmlMapper();
-            xmlMapper.writeValue(new File(FILE_PATH), messages);
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.writeValue(new File(FILE_PATH), messages);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void loadData() {
+    private void loadData() {
         try {
-            XmlMapper xmlMapper = new XmlMapper();
-            messages = xmlMapper.readValue(new File(FILE_PATH), new TypeReference<List<Message>>() {});
-
+            ObjectMapper objectMapper = new ObjectMapper();
+            messages = objectMapper.readValue(new File(FILE_PATH), new TypeReference<List<Message>>() {});
         } catch (IOException e) {
             e.printStackTrace();
         }

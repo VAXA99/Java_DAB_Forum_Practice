@@ -2,10 +2,12 @@ package com.dab_userforum.Controller;
 
 import com.dab_userforum.Entity.Message;
 import com.dab_userforum.Service.MessageService;
+import com.dab_userforum.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -15,19 +17,12 @@ public class PageController {
     @Autowired
     private MessageService messageService;
 
+    @Autowired
+    private UserService userService;
+
     @GetMapping("/")
-    public String getMainPage() {
+    public String getMainPage()  {
         return "index";
-    }
-
-    @GetMapping("/sign_up")
-    public String getSignUpPage() {
-        return "sign_up";
-    }
-
-    @GetMapping("/sign_in")
-    public String getSignInPage() {
-        return "sign_in";
     }
 
     @GetMapping("/messages")
@@ -36,5 +31,6 @@ public class PageController {
         model.addAttribute("messages", messages);
         return "messages";
     }
+
 
 }

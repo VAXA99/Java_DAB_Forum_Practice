@@ -18,6 +18,7 @@ p {
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+    background-color: #D0D0D0;
 }
 
 /* Header */
@@ -59,7 +60,7 @@ body {
 /* Intro */
 
 .intro {
-    background-color: #fff;
+    background-color: #D0D0D0;
     padding: 164px 0;
 }
 
