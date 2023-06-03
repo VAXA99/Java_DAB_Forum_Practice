@@ -37,5 +37,4 @@ public class MessageService implements IMessageService{
     @Async
     public void delete(Integer id) {
         messageRepository.delete(id);
-    }
-}
+    }}

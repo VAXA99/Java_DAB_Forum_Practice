@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Cardo:400i|Open+Sans:700|Raleway:300,400,600,700&display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/static/messages.css">
+    <link rel="stylesheet" type="text/css" href="/messages.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-design-icons@3.0.1/iconfont/material-icons.css">
     <title>Сообщения</title>
 </head>
@@ -18,28 +18,34 @@
         <nav class="nav">
             <a href="/" class="nav-link">Главная</a>
             <a href="/messages" class="nav-link">Сообщения</a>
-            <a href="/sign_in" class="nav-link">Войти</a>
             <a href="/logout" class="nav-link">Выйти</a>
+            <a href="/sign_in" class="nav-link">Войти</a>
         </nav>
     </div>
 </header>
+
 <div th:each="message : ${messages}">
-    <div class="message">
-        <div class="actions">
-            <button><i class="material-icons">edit</i></button>
-            <button><i class="material-icons">delete</i></button>
+    <div class="message" id="message_${message.id}">
+        <div class="actions" th:if="${message.login} == ${login}">
+            <button>
+                <a th:href="@{/delete_message/{messageId}(messageId=${message.id})}" class="delete-href">
+                    <i class="material-icons">delete</i></a>
+            </button>
         </div>
         <p class="content" th:text="${message.messageContent}"></p>
         <div class="meta">
-            <span>Username: <span th:text="${message.login}"></span></span>
-            <span>Timestamp: <span class="timestamp" th:text="${message.timestamp}"></span></span>
+            <span th:text="${message.login}"></span>
+            <span class="timestamp" th:text="${message.timestamp}"></span>
         </div>
     </div>
 </div>
 
-<div class="write-message-container">
-    <input type="text" class="write-message-input" placeholder="Write a message...">
-    <button class="write-message-button"><i class="material-icons">send</i></button>
-</div>
+<form method="POST" action="/write_message" class="message-form">
+    <div class="write-message-container">
+        <input type="text" class="write-message-input" name="messageContent" placeholder="Напишите сообщение...">
+        <button type="submit" class="write-message-button"><i class="material-icons">send</i></button>
+    </div>
+</form>
+
 </body>
 </html>

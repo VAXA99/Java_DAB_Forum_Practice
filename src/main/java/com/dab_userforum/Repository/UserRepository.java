@@ -38,9 +38,9 @@ public class UserRepository implements IUserRepository {
     }
 
     @Async
-    public User findByUsername(String username) {
+    public User findByUsername(String login) {
         for (User user : users) {
-            if (user.getLogin().equals(username)) {
+            if (user.getLogin().equals(login)) {
                 return user;
             }
         }

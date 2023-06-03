@@ -31,4 +31,12 @@ public class UserDetailsServiceConfig implements UserDetailsService {
         }
         throw new UsernameNotFoundException("User not authorized.");
     }
+
+    @Async
+    public String findUserIdByUsername(String login) {
+        User neededUser = userRepository.findByUsername(login);
+        Integer neededUserId =  neededUser.getId();
+
+        return neededUserId.toString();
+    }
 }

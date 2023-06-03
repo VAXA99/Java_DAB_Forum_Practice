@@ -96,18 +96,18 @@ body {
 .write-message-container {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     margin: 20px;
-    width: 97%;
+    width: 100%;
 }
 
 .write-message-input {
-    flex: 1;
+    width: 94%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
-    width: 100%;
 }
 
 .write-message-button {
@@ -126,4 +126,9 @@ body {
 
 .write-message-button:hover {
     background-color: #555;
+}
+
+.delete-href {
+    text-decoration: none;
+    color: #07001f;
 }

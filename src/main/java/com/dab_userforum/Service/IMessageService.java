@@ -10,5 +10,4 @@ public interface IMessageService {
     public Message findById(Integer id);
     public void add(Message message);
     public void update(Message message);
-    public void delete(Integer id);
-}
+    public void delete(Integer id);}

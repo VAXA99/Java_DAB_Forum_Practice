@@ -9,10 +9,10 @@ public interface IUserService {
 
     public List<User> getAll();
     public User findById(Integer id);
+    public User findByUsername(String login);
     public void add(User user);
     public void update(User user);
     public void delete(Integer id);
     public void writeMessage(Message message,Integer userId);
     public void deleteMessage(Integer messageId, Integer userId);
-    public void updateMessage(Message message);
 }

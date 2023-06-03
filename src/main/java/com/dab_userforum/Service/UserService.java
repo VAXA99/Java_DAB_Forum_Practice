@@ -32,6 +32,11 @@ public class UserService implements IUserService {
     }
 
     @Async
+    public User findByUsername(String login) {
+        return userRepository.findByUsername(login);
+    }
+
+    @Async
     public void delete(Integer id) {
         userRepository.delete(id);
     }
@@ -66,8 +71,4 @@ public class UserService implements IUserService {
         messageRepository.delete(messageId);
     }
 
-    @Async
-    public void updateMessage(Message message) {
-        messageRepository.update(message);
-    }
 }
