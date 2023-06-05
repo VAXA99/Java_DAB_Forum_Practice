@@ -1,1 +1,16 @@
-[{"id":0,"messageContent":"Слава - соси хуй!","userId":0,"login":"VAXA99","timestamp":"2023-06-03 21:19"},{"id":1,"messageContent":"Реально","userId":1,"login":"Terminator-Nagibator","timestamp":"2023-06-03 21:20"}]
+[
+  {
+    "id": 0,
+    "messageContent": "Всем приветё",
+    "userId": 0,
+    "login": "Terminator-Nagibator",
+    "timestamp": "2023-06-05 13:51"
+  },
+  {
+    "id": 3,
+    "messageContent": "Ваха - токсик даун!",
+    "userId": 2,
+    "login": "AcusticEvil",
+    "timestamp": "2023-06-05 13:53"
+  }
+]

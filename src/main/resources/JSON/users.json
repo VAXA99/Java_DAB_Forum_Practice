@@ -1,1 +1,38 @@
-[{"id":0,"login":"VAXA99","password":"$2a$10$Hv7vO.M7.IkHv0pKN9L7ie23UoWiBwuAlKkpn5BUc04MNaf8HAaYS","dateOfRegistration":"2023-06-03","emailAddress":"vaxa993@icloud.com","numberOfMessages":1,"role":"user"},{"id":1,"login":"Terminator-Nagibator","password":"$2a$10$8Ts33T.ZF/2YvdfYX7DbAOfHPC/kwCGDaP3gM2iYM1O9lnnyU2EbK","dateOfRegistration":"2023-06-03","emailAddress":"daun@gmail.com","numberOfMessages":1,"role":"user"}]
+[
+  {
+    "id": 0,
+    "login": "Terminator-Nagibator",
+    "password": "$2a$10$JQkXqpz4Psfib6QbTMnfIugsUX1.Qj7KSstVE/erprfYYRb/h28fe",
+    "dateOfRegistration": "2023-06-05",
+    "emailAddress": "daun@gmail.com",
+    "numberOfMessages": 1,
+    "role": "user"
+  },
+  {
+    "id": 1,
+    "login": "VAXA99",
+    "password": "$2a$10$F97cLPKh35jyQ0q32NxFAOoA7SIU1TcTv6Q8.FywshU.ceJYgwjAG",
+    "dateOfRegistration": "2023-06-05",
+    "emailAddress": "vaxa993@icloud.com",
+    "numberOfMessages": 0,
+    "role": "user"
+  },
+  {
+    "id": 2,
+    "login": "AcusticEvil",
+    "password": "$2a$10$l3V5jzo592/pJ/1GOl2eqeBWgNZThfUzlpvtTWGwfOKjR/hz2inD6",
+    "dateOfRegistration": "2023-06-05",
+    "emailAddress": "prisha@gmail.com",
+    "numberOfMessages": 1,
+    "role": "user"
+  },
+  {
+    "id": 3,
+    "login": "User2",
+    "password": "$2a$10$FQtLygj8sC8KgyNOkmydbexN7UaXQp2LPMyLma5tHHrYU/VK5samK",
+    "dateOfRegistration": "2023-06-05",
+    "emailAddress": "govno@gmail.com",
+    "numberOfMessages": 0,
+    "role": "user"
+  }
+]
